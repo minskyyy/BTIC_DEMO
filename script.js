@@ -51,3 +51,12 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
+function initialSetup() {
+  if (document.getElementById("loader") != null) {
+    setTimeout(function() {
+      document.getElementById('loader').style.display = 'block';
+    }, 800);
+  }
+}
+
+initialSetup();

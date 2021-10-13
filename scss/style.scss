@@ -129,13 +129,20 @@ a {
 }
 
 #hidden{
+	position: relative;
 		display: block;
 		transition-delay: 10s;
 		animation-delay: 5s;
-    -webkit-animation: fadeInFromNone 4s ease-out;
-    -moz-animation: fadeInFromNone 4s ease-out;
-    -o-animation: fadeInFromNone 4s ease-out;
-    animation: fadeInFromNone 4s ease-out;
+    -webkit-animation: fadeInFromNone 6s ease-out;
+    -moz-animation: fadeInFromNone 6s ease-out;
+    -o-animation: fadeInFromNone 6s ease-out;
+    animation: fadeInFromNone 6s ease-out;
+}
+#loader{
+	width: 60px;
+	position: relative;
+	margin-left: 180px;
+	bottom: 300px;
 }
 
 @-webkit-keyframes fadeInFromNone {
