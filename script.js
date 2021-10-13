@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
 function initialSetup() {
     setTimeout(function() {
       document.getElementById("loader").style.display = 'none';
-    }, 4500);
+    }, 4800);
 }
 
 initialSetup();
