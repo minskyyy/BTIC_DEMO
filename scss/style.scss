@@ -128,11 +128,104 @@ a {
 	}
 }
 
+#hidden{
+		display: block;
+		transition-delay: 10s;
+		animation-delay: 5s;
+    -webkit-animation: fadeInFromNone 3s ease-out;
+    -moz-animation: fadeInFromNone 3s ease-out;
+    -o-animation: fadeInFromNone 3s ease-out;
+    animation: fadeInFromNone 3s ease-out;
+}
+
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    75% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeInFromNone {
+	0% {
+			display: none;
+			opacity: 0;
+	}
+
+	80% {
+			display: block;
+			opacity: 0;
+	}
+
+	100% {
+			display: block;
+			opacity: 1;
+	}
+}
+
+@-o-keyframes fadeInFromNone {
+	0% {
+			display: none;
+			opacity: 0;
+	}
+
+	80% {
+			display: block;
+			opacity: 0;
+	}
+
+	100% {
+			display: block;
+			opacity: 1;
+	}
+}
+
+@keyframes fadeInFromNone {
+	0% {
+			display: none;
+			opacity: 0;
+	}
+
+	80% {
+			display: block;
+			opacity: 0;
+	}
+
+	100% {
+			display: block;
+			opacity: 1;
+	}
+}
+
 model-viewer {
+
   width: 400px;
   height: 500px;
 	background: rgba(255, 255, 255, 0);
 	z-index: 2;
+}
+#default-poster {
+		visibility: hidden;
+    width: 100%;
+    height: 100%;
+    display: hidden;
+    position: absolute;
+    border: none;
+    padding: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(0, 22, 22, 1)!important;
+    background-image: rgba(0, 0, 22, 1)!important;
 }
 
 .inputContainer{
@@ -142,9 +235,7 @@ model-viewer {
 	animation: gradient 15s ease infinite;
 }
 
-.stickySite{
 
-}
 
 
 
