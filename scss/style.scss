@@ -132,6 +132,7 @@ model-viewer {
   width: 400px;
   height: 500px;
 	background: rgba(255, 255, 255, 0);
+	z-index: 2;
 }
 
 .inputContainer{
@@ -206,21 +207,20 @@ model-viewer {
 
 	}
 	.topic{
-		z-index: -1;
 		pointer-events: none;
-
+		z-index: 0;
 		.upper{
-			pointer-events: none;
 				font-style: normal;
 				font-weight: bold;
 				font-size: 47px;
+				pointer-events: none;
 					}
 		.lower{
-			pointer-events: none;
 			font-style: normal;
 			font-weight: 800;
 			font-size: 51px;
 			line-height: 2px;
+			pointer-events: none;
 					}
 	}
 }
@@ -228,6 +228,7 @@ model-viewer {
 #szButton{
 	padding-top: 1.5vh;
 	text-align: center;
+	z-index: 3;
 }
 #szButton:hover{
 	background: white !important;
