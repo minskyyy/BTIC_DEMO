@@ -129,8 +129,8 @@ a {
 }
 
 model-viewer {
-  width: 800px;
-  height: 600px;
+  width: 400px;
+  height: 500px;
 	background: rgba(255, 255, 255, 0);
 }
 
@@ -206,12 +206,17 @@ model-viewer {
 
 	}
 	.topic{
+		z-index: -1;
+		pointer-events: none;
+
 		.upper{
+			pointer-events: none;
 				font-style: normal;
 				font-weight: bold;
 				font-size: 47px;
 					}
 		.lower{
+			pointer-events: none;
 			font-style: normal;
 			font-weight: 800;
 			font-size: 51px;
