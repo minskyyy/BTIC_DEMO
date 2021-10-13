@@ -101,7 +101,7 @@
         <div class="col-sm-4 pt-15">
 
 
-            <model-viewer id="hidden" src="images/scene.glb"
+            <model-viewer class="hidden" id="modelType" src="images/turbine.glb"
             poster="images/scene2.png"
             alt="3D Model" ar ar-modes="webxr scene-viewer quick-look"
             environment-image="neutral" id="reveal" loading="eager" camera-controls auto-rotate></model-viewer>
@@ -145,7 +145,7 @@
               <!-- End of Row -->
               <div class="row mt-3">
                 <div class="col-md">
-                  <a href="index.html#digikam" id="szButton" class="justify-content-center cards ">
+                  <a onclick="changeModel('SZ1');return false;" href="" id="szButton" class="justify-content-center cards ">
                     <div class="headline">
                         Szenario 1
                     </div>
@@ -156,7 +156,7 @@
                 </div>
                 <!-- End of Column -->
                 <div class="col-md">
-                  <a href="index.html#sofia" id="szButton" class="justify-content-center cards ">
+                  <a onclick="changeModel('SZ2');return false;" href="" id="szButton" class="justify-content-center cards ">
                     <div class="headline">
                         Szenario 2
                     </div>
