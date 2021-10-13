@@ -59,30 +59,30 @@ function initialSetup() {
 
 initialSetup();
 
-function changeModel(button) {
-  var list;
-  path = document.getElementById('modelType');
-    if(button=='SZ1'){
-      FadeInOut('out');
-      setTimeout(() => {path.setAttribute("src", "images/scene.glb"); }, 2000);
-      setTimeout(() => {FadeInOut('in'); }, 3000);
-
-  }
-  else if (button=='SZ2'){
-    FadeInOut('out');
-    setTimeout(() => {path.setAttribute("src", "images/turbine.glb"); }, 2000);
-    setTimeout(() => {FadeInOut('in'); }, 3000);
-  }
-}
-
-function FadeInOut(type){
-  if(type=='in'){
-    document.getElementById('modelType').style.visibility="visible!important"
-
-
-  }
-  else if (type=='out') {
-    document.getElementById('modelType').style.visibility="hidden!important"
-
-  }
-}
+// function changeModel(button) {
+//   var list;
+//   path = document.getElementById('modelType');
+//     if(button=='SZ1'){
+//       FadeInOut('out');
+//       setTimeout(() => {path.setAttribute("src", "images/scene.glb"); }, 2000);
+//       setTimeout(() => {FadeInOut('in'); }, 3000);
+//
+//   }
+//   else if (button=='SZ2'){
+//     FadeInOut('out');
+//     setTimeout(() => {path.setAttribute("src", "images/turbine.glb"); }, 2000);
+//     setTimeout(() => {FadeInOut('in'); }, 3000);
+//   }
+// }
+//
+// function FadeInOut(type){
+//   if(type=='in'){
+//     document.getElementById('modelType').style.visibility="visible!important"
+//
+//
+//   }
+//   else if (type=='out') {
+//     document.getElementById('modelType').style.visibility="hidden!important"
+//
+//   }
+// }
