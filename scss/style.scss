@@ -139,6 +139,7 @@ a {
     animation: fadeInFromNone 6s ease-out;
 }
 #loader{
+	display: block;
 	width: 60px;
 	position: relative;
 	margin-left: 180px;

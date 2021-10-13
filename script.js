@@ -52,11 +52,9 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 function initialSetup() {
-  if (document.getElementById("loader") != null) {
     setTimeout(function() {
-      document.getElementById('loader').style.display = 'block';
-    }, 800);
-  }
+      document.getElementById("loader").style.display = 'none';
+    }, 4500);
 }
 
 initialSetup();
