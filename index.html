@@ -36,7 +36,7 @@
 	<!-- SiteLogo  -->
     <link rel="icon" href="images/sitelogo.png">
 </head>
-<body>
+<body onload="pageContentLoad('section1')">
   <div class="site-mobile-menu site-navbar-target">
     <div class="site-mobile-menu-header">
       <div class="site-mobile-menu-close mt-3">
@@ -68,7 +68,7 @@
 
             <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
               <li><a href="#start" id="headerText" class="nav-link">Start</a></li>
-              <li><a href="#about" id="headerText" class="nav-link">Über</a></li>
+              <li><a href="about.html" id="headerText" class="nav-link">Über</a></li>
               <li class="has-children">
                 <a href="#demo" class="nav-link">Demo</a>
                 <ul class="dropdown">
@@ -76,7 +76,7 @@
                   <li><a href="#sofia" id="headerText" class="nav-link">Sofia</a></li>
                 </ul>
               </li>
-              <li><a href="#contact-section" id="headerText" class="nav-link">Kontakt</a></li>
+              <li><a href="contact.html" id="headerText" class="nav-link">Kontakt</a></li>
               <li class="has-children">
                 <a class="nav-link">
                   <img src="images/german.svg" width="20px" alt="german" />
@@ -94,7 +94,7 @@
     </div>
   </header>
 
-<div class="mainContainer">
+<div class="mainContainer opacity-hidden" id="section1">
   <div id="start" class="hero panel pt-10">
     <div class="container h-100 w-100">
       <div class="row row align-items-center h-50">

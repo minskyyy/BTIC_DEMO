@@ -52,9 +52,11 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 function initialSetup() {
+  if (document.getElementById("loader") !=null) {
     setTimeout(function() {
       document.getElementById("loader").style.display = 'none';
     }, 5000);
+  }
 }
 
 initialSetup();
@@ -64,27 +66,27 @@ function changeModel(button) {
   path = document.getElementById('modelType');
     if(button=='SZ1'){
 //      FadeInOut('out');
-    fadeOutEffect("hideModel");
+    fadeOutEffect("hideModel",20);
     document.getElementById("loader").style.display = 'block';
     setTimeout(() => {path.setAttribute("src", "images/scene.glb")}, 600);
     setTimeout(() => {document.getElementById("loader").style.display = 'none'}, 1400);
-    setTimeout(() => {fadeInEffect("hideModel")}, 1600);
+    setTimeout(() => {fadeInEffect("hideModel",20)}, 1600);
 //      setTimeout(() => {FadeInOut('in'); }, 3000);
 
   }
   else if (button=='SZ2'){
 //    FadeInOut('out');
-    fadeOutEffect("hideModel");
+    fadeOutEffect("hideModel",20);
     document.getElementById("loader").style.display = 'block';
     setTimeout(() => {path.setAttribute("src", "images/turbine.glb")}, 600);
     setTimeout(() => {document.getElementById("loader").style.display = 'none'}, 1400);
 
-    setTimeout(() => {fadeInEffect("hideModel")}, 1600);
+    setTimeout(() => {fadeInEffect("hideModel",20)}, 1600);
 //    setTimeout(() => {FadeInOut('in'); }, 3000);
   }
 }
 
-function fadeOutEffect(path) {
+function fadeOutEffect(path, time) {
     var fadeTarget = document.getElementById(path);
     var fadeEffect = setInterval(function () {
         if (!fadeTarget.style.opacity) {
@@ -95,19 +97,38 @@ function fadeOutEffect(path) {
         } else {
             clearInterval(fadeEffect);
         }
-    }, 20);
+    }, time);
 }
 
-function fadeInEffect(path) {
-            var element = document.getElementById(path);
-            var op = 0.1;  // initial opacity
-            element.style.display = 'block';
-            var timer = setInterval(function () {
-                if (op >= 1){
-                    clearInterval(timer);
-                }
-                element.style.opacity = op;
-                element.style.filter = 'alpha(opacity=' + op * 100 + ")";
-                op += op * 0.1;
-            }, 20);
+
+
+function fadeInEffect(path, time, delay) {
+          //Delay Start
+            setTimeout(() => {
+              //Function Start
+              var element = document.getElementById(path);
+              var op = 0.1;  // initial opacity
+              element.style.display = 'block';
+              var timer = setInterval(function () {
+                  if (op >= 1){
+                      clearInterval(timer);
+                  }
+                  element.style.opacity = op;
+                  element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+                  op += op * 0.1;
+              }, time);
+            //Function End
+            }, delay);
+            //Delay End
         }
+
+function pageContentLoad(path1, path2, path3, path4){
+  let paths = [path1, path2, path3, path4];
+  let time = 20;
+  let delay = 50;
+  for (var i = 0; i < paths.length; i++) {
+    fadeInEffect(paths[i], time, delay);
+    delay+=100;
+    time+=5;
+  }
+}
