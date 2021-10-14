@@ -173,7 +173,20 @@ a {
 	visibility: visible;
 }
 
+.hoverZoom{
+	transition: transform 0.3s, filter 0.3s ease-in-out;
+  transform-origin: center center;
+  filter: brightness(50%);
+}
 
+.hoverZoom:hover{
+	filter: brightness(100%);
+ 	transform: scale(1.03);
+	cursor: pointer;
+}
+
+
+//Fade In
 @-webkit-keyframes fadeInFromNone {
     0% {
 
