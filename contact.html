@@ -97,49 +97,63 @@
 <div class="mainContainer">
   <div class="hero panel pt-10">
     <div class="container pt-5 h-100 w-100">
-    <div class="opacity-25 opacity-hidden" id="section1">
-      <h1> Über das Projekt </h1>
-      <a class="text-secondary"> Atos-Offering: Bereitstellung einer Ende-zu-Ende (IT-)Unterstützung für eine ganzheitliche Ersatzteilkonstruktion und -fertigung mittels AM  </a>
+    <div class="row">
+      <div class="col">
+        lalala
+      </div>
+      <div class="col">
+            <form id="contactForm">
+
+                <!-- Name input -->
+                <div class="mb-3">
+                  <label class="form-label" for="name">Name</label>
+                  <input class="form-control" id="name" type="text" placeholder="Name" data-sb-validations="required" />
+                  <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                </div>
+
+                <!-- Email address input -->
+                <div class="mb-3">
+                  <label class="form-label" for="emailAddress">Email Address</label>
+                  <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required, email" />
+                  <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
+                  <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
+                </div>
+
+                <!-- Message input -->
+                <div class="mb-3">
+                  <label class="form-label" for="message">Message</label>
+                  <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;" data-sb-validations="required"></textarea>
+                  <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
+                </div>
+
+                <!-- Form submissions success message -->
+                <div class="d-none" id="submitSuccessMessage">
+                  <div class="text-center mb-3">Form submission successful!</div>
+                </div>
+
+                <!-- Form submissions error message -->
+                <div class="d-none" id="submitErrorMessage">
+                  <div class="text-center text-danger mb-3">Error sending message!</div>
+                </div>
+
+                <!-- Form submit button -->
+                <div class="d-grid">
+                  <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button>
+                </div>
+
+              </form>
+      </div>
     </div>
-      <div class="row row pt-5 h-25 align-top">
-
-        <div class="col opacity-hidden" id="section2">
-          <h5> DigiKAM </h5>
-          <a class="text-secondary"> Durch die Atos Lösung erhält der OEM die Möglichkeit, geeignete AM-Dienstleister (in-house oder extern) mit dem erforderlichen Expertenwissen für die o.a. Fragestellung zu identifizieren und zu beauftragen und mit diesen entsprechende Engineering-Projekte und die anschließende Fertigung durchzuführen  </a>
-
-        </div>
-        <div class="col opacity-hidden" id="section3">
-          <h5> Sofia </h5>
-          <a class="text-secondary"> Der OEM kann nun über die Atos Fertigungsplattform AIP die Fertigung des betreffenden Ersatzteils planen und durchführen. Dabei kann das Ersatzteil entweder a) von ihm selbst oder b) durch einen von ihm beauftragten 3D Druckdienstleister  gefertigt und im Anschluss an den Endkunden verschickt werden. Alternativ können die Konstruktionsdaten auch vom OEM an den Endkunden lizensiert werden, der dann das jeweilige Ersatzteil im Bedarfsfall in Eigenregie druckt bzw. drucken lässt.  </a>
-
-        </div>
-      <!-- End of Col -->
-    </div>
-      <!-- End of Row -->
   </div>
   <!-- End of Container -->
-</div>
 
 
-    <div class="footer fixed-bottom mb-3 container opacity-hidden" id="section4">
-      <div class="row">
-        <a href="https://www.fraunhofer.de/" target="_blank" class="col hoverZoom">
-          <img width="200h" src="images/PartnerSVGs/Fraunhofer_hell.svg">
-        </a>
-        <a href="https://www.remmert.de/en/" target="_blank" class="col hoverZoom">
-          <img width="200h" src="images/PartnerSVGs/remmert_hell.svg">
-        </a>
-        <a href="http://www.krause-dimatec.de/" target="_blank" class="col hoverZoom">
-          <img width="200h" src="images/PartnerSVGs/krause.png">
-        </a>
-        <a href="https://www.miele.de/" target="_blank" class="col hoverZoom">
-          <img width="200h" src="images/PartnerSVGs/Miele_logo.svg">
-        </a>
-      </div>
+
+
   <!-- End of Hero -->
   </div>
 <!-- End of Main Container -->
-
+</div>
   <!-- local JS -->
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/popper.min.js"></script>
@@ -151,8 +165,6 @@
   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426"></script>
   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
   <!-- Model Viewer -->
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
 
 
 </body>
