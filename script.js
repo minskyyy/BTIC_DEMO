@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
 function initialSetup() {
   if (document.getElementById("loader") !=null) {
     setTimeout(function() {
-      document.getElementById("loader").style.display = 'none';
+      document.getElementById("loader").style.visibility = 'visible';
     }, 5000);
   }
 }
@@ -67,9 +67,9 @@ function changeModel(button) {
     if(button=='SZ1'){
 //      FadeInOut('out');
     fadeOutEffect("hideModel",20);
-    document.getElementById("loader").style.display = 'block';
+    document.getElementById("loader").visibility = 'hidden';
     setTimeout(() => {path.setAttribute("src", "images/scene.glb")}, 600);
-    setTimeout(() => {document.getElementById("loader").style.display = 'none'}, 1400);
+    setTimeout(() => {document.getElementById("loader").visibility = 'visible'}, 1400);
     setTimeout(() => {fadeInEffect("hideModel",20)}, 1600);
 //      setTimeout(() => {FadeInOut('in'); }, 3000);
 
@@ -77,9 +77,9 @@ function changeModel(button) {
   else if (button=='SZ2'){
 //    FadeInOut('out');
     fadeOutEffect("hideModel",20);
-    document.getElementById("loader").style.display = 'block';
+    document.getElementById("loader").visibility = 'hidden';
     setTimeout(() => {path.setAttribute("src", "images/turbine.glb")}, 600);
-    setTimeout(() => {document.getElementById("loader").style.display = 'none'}, 1400);
+    setTimeout(() => {document.getElementById("loader").visibility = 'visible'}, 1400);
 
     setTimeout(() => {fadeInEffect("hideModel",20)}, 1600);
 //    setTimeout(() => {FadeInOut('in'); }, 3000);

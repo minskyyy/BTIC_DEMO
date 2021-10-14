@@ -139,8 +139,6 @@ a {
 
 .hidden{
 		position: relative;
-		display: block;
-		transition-delay: 10s;
 		animation-delay: 5s;
     -webkit-animation: fadeInFromNone 6s ease-out;
     -moz-animation: fadeInFromNone 6s ease-out;
@@ -178,72 +176,72 @@ a {
 
 @-webkit-keyframes fadeInFromNone {
     0% {
-        display: none;
+
         opacity: 0;
     }
 
     75% {
-        display: block;
+
         opacity: 0;
     }
 
     100% {
-        display: block;
+
         opacity: 1;
     }
 }
 
 @-moz-keyframes fadeInFromNone {
 	0% {
-			display: none;
+
 			opacity: 0;
 	}
 
 	80% {
-			display: block;
+
 			opacity: 0;
 	}
 
 	100% {
-			display: block;
+
 			opacity: 1;
 	}
 }
 
 @-o-keyframes fadeInFromNone {
 	0% {
-			display: none;
+
 			opacity: 0;
 	}
 
 	80% {
-			display: block;
+
 			opacity: 0;
 	}
 
 	100% {
-			display: block;
+
 			opacity: 1;
 	}
 }
 
 @keyframes fadeInFromNone {
 	0% {
-			display: none;
+
 			opacity: 0;
 	}
 
 	80% {
-			display: block;
+
 			opacity: 0;
 	}
 
 	100% {
-			display: block;
+
 			opacity: 1;
 	}
 }
-//---------- FadeInOut
+//---------- FadeOut
 @-webkit-keyframes fadeOut {
     0% {
 				display: block;
