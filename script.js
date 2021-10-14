@@ -59,30 +59,45 @@ function initialSetup() {
 
 initialSetup();
 
-// function changeModel(button) {
-//   var list;
-//   path = document.getElementById('modelType');
-//     if(button=='SZ1'){
-//       FadeInOut('out');
-//       setTimeout(() => {path.setAttribute("src", "images/scene.glb"); }, 2000);
-//       setTimeout(() => {FadeInOut('in'); }, 3000);
-//
-//   }
-//   else if (button=='SZ2'){
-//     FadeInOut('out');
-//     setTimeout(() => {path.setAttribute("src", "images/turbine.glb"); }, 2000);
-//     setTimeout(() => {FadeInOut('in'); }, 3000);
-//   }
-// }
-//
-// function FadeInOut(type){
-//   if(type=='in'){
-//     document.getElementById('modelType').style.visibility="visible!important"
-//
-//
-//   }
-//   else if (type=='out') {
-//     document.getElementById('modelType').style.visibility="hidden!important"
-//
-//   }
-// }
+function changeModel(button) {
+  var list;
+  path = document.getElementById('modelType');
+    if(button=='SZ1'){
+//      FadeInOut('out');
+    fadeOutEffect();
+    document.getElementById("loader").style.display = 'block';
+    setTimeout(() => {path.setAttribute("src", "images/scene.glb")}, 200);
+    setTimeout(() => {document.getElementById("loader").style.display = 'none'}, 1400);
+    setTimeout(() => {fadeInEffect()}, 1500);
+//      setTimeout(() => {FadeInOut('in'); }, 3000);
+
+  }
+  else if (button=='SZ2'){
+//    FadeInOut('out');
+    fadeOutEffect();
+    document.getElementById("loader").style.display = 'block';
+    setTimeout(() => {path.setAttribute("src", "images/turbine.glb")}, 200);
+    setTimeout(() => {document.getElementById("loader").style.display = 'none'}, 1400);
+
+    setTimeout(() => {fadeInEffect()}, 1500);
+//    setTimeout(() => {FadeInOut('in'); }, 3000);
+  }
+}
+
+function fadeOutEffect() {
+    var fadeTarget = document.getElementById("hideModel");
+    var fadeEffect = setInterval(function () {
+        if (!fadeTarget.style.opacity) {
+            fadeTarget.style.opacity = 1;
+        }
+        if (fadeTarget.style.opacity > 0) {
+            fadeTarget.style.opacity -= 0.1;
+        } else {
+            clearInterval(fadeEffect);
+        }
+    }, 20);
+}
+
+function fadeInEffect() {
+    document.getElementById("hideModel").style.opacity = 1;
+        }
