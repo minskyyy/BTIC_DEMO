@@ -64,28 +64,28 @@ function changeModel(button) {
   path = document.getElementById('modelType');
     if(button=='SZ1'){
 //      FadeInOut('out');
-    fadeOutEffect();
+    fadeOutEffect("hideModel");
     document.getElementById("loader").style.display = 'block';
-    setTimeout(() => {path.setAttribute("src", "images/scene.glb")}, 200);
+    setTimeout(() => {path.setAttribute("src", "images/scene.glb")}, 600);
     setTimeout(() => {document.getElementById("loader").style.display = 'none'}, 1400);
-    setTimeout(() => {fadeInEffect()}, 1500);
+    setTimeout(() => {fadeInEffect("hideModel")}, 1600);
 //      setTimeout(() => {FadeInOut('in'); }, 3000);
 
   }
   else if (button=='SZ2'){
 //    FadeInOut('out');
-    fadeOutEffect();
+    fadeOutEffect("hideModel");
     document.getElementById("loader").style.display = 'block';
-    setTimeout(() => {path.setAttribute("src", "images/turbine.glb")}, 200);
+    setTimeout(() => {path.setAttribute("src", "images/turbine.glb")}, 600);
     setTimeout(() => {document.getElementById("loader").style.display = 'none'}, 1400);
 
-    setTimeout(() => {fadeInEffect()}, 1500);
+    setTimeout(() => {fadeInEffect("hideModel")}, 1600);
 //    setTimeout(() => {FadeInOut('in'); }, 3000);
   }
 }
 
-function fadeOutEffect() {
-    var fadeTarget = document.getElementById("hideModel");
+function fadeOutEffect(path) {
+    var fadeTarget = document.getElementById(path);
     var fadeEffect = setInterval(function () {
         if (!fadeTarget.style.opacity) {
             fadeTarget.style.opacity = 1;
@@ -98,6 +98,16 @@ function fadeOutEffect() {
     }, 20);
 }
 
-function fadeInEffect() {
-    document.getElementById("hideModel").style.opacity = 1;
+function fadeInEffect(path) {
+            var element = document.getElementById(path);
+            var op = 0.1;  // initial opacity
+            element.style.display = 'block';
+            var timer = setInterval(function () {
+                if (op >= 1){
+                    clearInterval(timer);
+                }
+                element.style.opacity = op;
+                element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+                op += op * 0.1;
+            }, 20);
         }
