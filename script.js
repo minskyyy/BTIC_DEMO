@@ -107,7 +107,7 @@ function fadeInEffect(path, time, delay) {
               //Function Start
               var element = document.getElementById(path);
               var op = 0.1;  // initial opacity
-              element.style.display = 'block';
+              //element.style.display = 'block';
               var timer = setInterval(function () {
                   if (op >= 1){
                       clearInterval(timer);
