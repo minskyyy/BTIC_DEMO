@@ -3,7 +3,7 @@ function animateFrom(elem, direction) {
   var x = 0,
       y = direction * 100;
   if(elem.classList.contains("reveal_fromLeft")) {
-    x = -100;
+    x = -30;
     y = 0;
   } else if (elem.classList.contains("reveal_fromRight")) {
     x = 100;
@@ -63,13 +63,12 @@ initialSetup();
 
 function changeModel(button) {
   var list;
-  path = document.getElementById('modelType');
     if(button=='SZ1'){
 //      FadeInOut('out');
     fadeOutEffect("hideModel",20);
-    document.getElementById("loader").visibility = 'hidden';
-    setTimeout(() => {path.setAttribute("src", "images/scene.glb")}, 600);
-    setTimeout(() => {document.getElementById("loader").visibility = 'visible'}, 1400);
+    document.getElementById("loader").visibility = 'visible!important';
+    setTimeout(() => {document.getElementById("modelType").setAttribute("src", "images/scene.glb")}, 600);
+    setTimeout(() => {document.getElementById("loader").visibility = 'hidden!important'}, 1400);
     setTimeout(() => {fadeInEffect("hideModel",20)}, 1600);
 //      setTimeout(() => {FadeInOut('in'); }, 3000);
 
@@ -77,9 +76,9 @@ function changeModel(button) {
   else if (button=='SZ2'){
 //    FadeInOut('out');
     fadeOutEffect("hideModel",20);
-    document.getElementById("loader").visibility = 'hidden';
-    setTimeout(() => {path.setAttribute("src", "images/turbine.glb")}, 600);
-    setTimeout(() => {document.getElementById("loader").visibility = 'visible'}, 1400);
+    document.getElementById("loader").visibility = 'visible!important';
+    setTimeout(() => {document.getElementById("modelType").setAttribute("src", "images/turbine.glb")}, 600);
+    setTimeout(() => {document.getElementById("loader").visibility = 'hidden!important'}, 1400);
 
     setTimeout(() => {fadeInEffect("hideModel",20)}, 1600);
 //    setTimeout(() => {FadeInOut('in'); }, 3000);
