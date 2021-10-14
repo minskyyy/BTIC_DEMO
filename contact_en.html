@@ -21,7 +21,7 @@
 
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="css/fontawesome-all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,7 +68,7 @@
 
             <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
               <li><a href="index.html#start" id="headerText" class="nav-link">Start</a></li>
-              <li><a href="#about" id="headerText" class="nav-link">Über</a></li>
+              <li><a href="#about" id="headerText" class="nav-link">About</a></li>
               <li class="has-children">
                 <a href="index.html#start" class="nav-link">Demo</a>
                 <ul class="dropdown">
@@ -76,14 +76,14 @@
                   <li><a href="index.html#sofia" id="headerText" class="nav-link">Sofia</a></li>
                 </ul>
               </li>
-              <li><a href="contact.html" id="headerText" class="nav-link">Kontakt</a></li>
+              <li><a href="contact_en.html" id="headerText" class="nav-link">Contact</a></li>
               <li class="has-children">
                 <a class="nav-link">
-                  <img src="images/german.svg" width="20px" alt="german" />
-                  <img src="images/english.svg" width="20px" alt="german" hidden/>
+                  <img src="images/german.svg" width="20px" alt="german" hidden/>
+                  <img src="images/english.svg" width="20px" alt="german" />
                 </a>
                 <ul class="dropdown" width="300px">
-                  <li><a href="about_en.html"><img src="images/english.svg" width="20px" alt="german"/> Englisch</a> </li>
+                  <li><a href="contact.html"><img src="images/german.svg" width="20px" alt="german"/> German</a> </li>
                 </ul>
               </li>
             </ul>
@@ -94,52 +94,80 @@
     </div>
   </header>
 
-<div class="mainContainer">
+<div class="mainContainer contactBackground">
   <div class="hero panel pt-10">
     <div class="container pt-5 h-100 w-100">
-    <div class="opacity-hidden" id="section1">
-      <h1> Über das Projekt </h1>
-      <a class="text-secondary"> Atos-Offering: Bereitstellung einer Ende-zu-Ende (IT-)Unterstützung für eine ganzheitliche Ersatzteilkonstruktion und -fertigung mittels AM  </a>
-    </div>
-      <div class="row row pt-5 h-25 align-top">
+    <div class="row">
+      <div class="col">
+          <div class="row opacity-hidden" id="section1">
+            <div class="col-xl-5 mr-1 imageDiv">
+              <img class="imagePerson" src="images/person1.jpg"/>
+              <img class="backgroundCircle" id="circleGreen" src="images/svg/greencircle.svg"/>
+              <img class="backgroundCircle" id="circleBlue" src="images/svg/bluecircle.svg"/>
+              <img class="backgroundCircle" id="circleRed" src="images/svg/redcircle.svg"/>
+            </div>
+              <!-- End of col -->
+            <div class="col-sm pt-5">
+              <h4> Justus Schäfer </h4>
+              <h6> Digital Business & Innovation Manager @ Atos</h6>
+              <a class="text-secondary"> <i class="fas fa-envelope pr-1"></i> justus.schaefer@atos.net </a> </br>
+              <a class="text-secondary"> <i class="fas fa-phone pr-1"></i> +49 17777 89661 </a>
+            </div>
+              <!-- End of col -->
+          </div>
+            <!-- End of row -->
+            <div class="row pt-5 opacity-hidden" id="section2">
+              <div class="col-xl-5 mr-1 imageDiv">
+                <img class="imagePerson" src="images/person2.jpg"/>
+                <img class="backgroundCircle" id="circleGreen" src="images/svg/greencircle.svg"/>
+                <img class="backgroundCircle" id="circleBlue" src="images/svg/bluecircle.svg"/>
+                <img class="backgroundCircle" id="circleRed" src="images/svg/redcircle.svg"/>
+              </div>
+                <!-- End of col -->
+              <div class="col-sm pt-5">
+                <h4> Christian Spohn </h4>
+                <h6> Digital Business & Innovation Manager @ Atos</h6>
+                <a class="text-secondary"> <i class="fas fa-envelope pr-1"></i> christian.spohn@atos.net </a> </br>
+                <a class="text-secondary"> <i class="fas fa-phone pr-1"></i> +49 23332 2332 </a>
+              </div>
+                <!-- End of col -->
+            </div>
+              <!-- End of row -->
+      </div>
+      <div class="col-sm-5">
+        <h3> Contact Form </h3>
+        <form>
+            <div class="form-group mt-4">
 
-        <div class="col opacity-hidden" id="section2">
-          <h5> DigiKAM </h5>
-          <a class="text-secondary"> Durch die Atos Lösung erhält der OEM die Möglichkeit, geeignete AM-Dienstleister (in-house oder extern) mit dem erforderlichen Expertenwissen für die o.a. Fragestellung zu identifizieren und zu beauftragen und mit diesen entsprechende Engineering-Projekte und die anschließende Fertigung durchzuführen  </a>
+            <input type="text" class="form-control" id="formGroupExampleInput" required placeholder="Name">
+            </div>
+              <img class="backgroundCircle" id="circleBox" src="images/svg/circleBox.svg"/>
+            <div class="form-group mt-4">
+
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Email">
+            </div>
+            <div class="form-group mt-4">
+
+                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" placeholder="Message"></textarea>
+            </div>
+        </form>
+        <div class="d-flex flex-row-reverse top-10">
 
         </div>
-        <div class="col opacity-hidden" id="section3">
-          <h5> Sofia </h5>
-          <a class="text-secondary"> Der OEM kann nun über die Atos Fertigungsplattform AIP die Fertigung des betreffenden Ersatzteils planen und durchführen. Dabei kann das Ersatzteil entweder a) von ihm selbst oder b) durch einen von ihm beauftragten 3D Druckdienstleister  gefertigt und im Anschluss an den Endkunden verschickt werden. Alternativ können die Konstruktionsdaten auch vom OEM an den Endkunden lizensiert werden, der dann das jeweilige Ersatzteil im Bedarfsfall in Eigenregie druckt bzw. drucken lässt.  </a>
-
-        </div>
-      <!-- End of Col -->
+      </div>
+        <!-- End of col -->
     </div>
-      <!-- End of Row -->
+      <!-- End of row -->
   </div>
   <!-- End of Container -->
-</div>
 
 
-    <div class="footer fixed-bottom mb-3 container opacity-hidden" id="section4">
-      <div class="row">
-        <a href="https://www.fraunhofer.de/" target="_blank" class="col hoverZoom">
-          <img width="200h" src="images/PartnerSVGs/Fraunhofer_hell.svg">
-        </a>
-        <a href="https://www.remmert.de/en/" target="_blank" class="col hoverZoom">
-          <img width="200h" src="images/PartnerSVGs/remmert_hell.svg">
-        </a>
-        <a href="http://www.krause-dimatec.de/" target="_blank" class="col hoverZoom">
-          <img width="200h" src="images/PartnerSVGs/krause.png">
-        </a>
-        <a href="https://www.miele.de/" target="_blank" class="col hoverZoom">
-          <img width="200h" src="images/PartnerSVGs/Miele_logo.svg">
-        </a>
-      </div>
+
+
   <!-- End of Hero -->
   </div>
 <!-- End of Main Container -->
-
+</div>
   <!-- local JS -->
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/popper.min.js"></script>
@@ -151,8 +179,6 @@
   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426"></script>
   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
   <!-- Model Viewer -->
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
 
 
 </body>

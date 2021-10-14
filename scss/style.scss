@@ -102,6 +102,14 @@ a {
 	opacity: 0;
 }
 
+.copyright{
+	font-family: 'Segoe UI', sans-serif;
+	font-size: 13px;
+	color: white!important;
+	opacity: 0.4;
+	pointer-events: none;
+}
+
 .col-md-xsmall {width: 2vh}
 
 .scrollSymbol {
@@ -122,7 +130,6 @@ a {
 	scroll-snap-align: start;
 	height: 332.1;
 	width: 100%;
-	scroll-snap-stop: always;
 	.p1{
 		height: 142.1vh!important;
 		scroll-snap-align: none!important;
@@ -878,4 +885,81 @@ model-viewer#reveal {
 		// padding-top: 10px!important;
 		// padding-bottom: 10px!important;
 	}
+}
+
+//contact
+.imageDiv{
+	height: 200px;
+	width: 200px;
+	margin-left: -20px;
+	margin-right: -20px;
+	position: relative;
+	z-index: 4;
+}
+
+.imagePerson{
+	width:200px;
+	height:200px;
+	object-fit:cover;
+	border-radius:50%;
+}
+.backgroundCircle{
+	position: absolute;
+	top:0;
+	left: 15px;
+	width:200px;
+	height:200px;
+	opacity: 0.4;
+}
+
+#circleGreen{
+	left: 200px;
+	z-index: 3;
+	transform: scale(0.8);
+}
+#circleRed{
+	left: 120px;
+	z-index: 4;
+	transform: scale(0.9);
+}
+#circleBlue{
+
+	z-index: 4;
+}
+#circleBox{
+	left: 240.5px;
+	top: 8.1vh;
+	transform: scale(1.2);
+	z-index: 0;
+	pointer-events: none;
+}
+
+.form-control {
+	z-index: 1;
+	background: rgba(0, 0, 0, 0);
+	border-radius: 0px;
+	border-width: 2px;
+	font-family: 'Segoe UI', sans-serif;
+	color: white;
+}
+.form-control:active {
+	background: rgba(0, 0, 0, 0);
+	color: white!important;
+}
+.form-control:focus{
+	background: rgba(0, 0, 0, 0.1);
+	border-color: rgba(0, 0, 0, 0.1);
+	color: white!important;
+	box-shadow: 0 0 0 0.2rem #09426a;
+}
+.form-control:active {
+	background: rgba(0, 0, 0, 0.1);
+	border-color: rgba(0, 0, 0, 0.1);
+	color: white!important;
+}
+
+.contactBackground{
+	background: linear-gradient(-45deg,#0d1e1d,#31171d,#0d1e1d,#0f0f0f,#0f0f0f,#0f0f0f,#0f0f0f,#0d1e1d, #31171d,#0d1e1d);
+	background-size: 200% 200%;
+	animation: gradient 20s ease infinite;
 }
