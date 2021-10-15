@@ -10,8 +10,6 @@ body, html {
 	width: 100%;
 	background: #0f0f0f;
 
-	overflow-y: scroll;
-  scroll-snap-type: y mandatory;
 	scroll-behavior: smooth;
 
 	&:before {
@@ -127,8 +125,7 @@ a {
 	width: 100%;
 }
 .panel {
-	scroll-snap-align: start;
-	height: 332.1;
+	height: 332.1vh;
 	width: 100%;
 	.p1{
 		height: 142.1vh!important;
@@ -347,14 +344,10 @@ model-viewer#reveal {
 }
 
 .inputContainer{
-
 	background: linear-gradient(0deg, #0596FF, #A375FF, #00A39B, #FF5269);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 }
-
-
-
 
 
 @keyframes gradient {
