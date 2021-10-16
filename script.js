@@ -41,10 +41,11 @@ document.addEventListener("DOMContentLoaded", function() {
     hide(elem); // assure that the element is hidden when scrolled into view
 
     ScrollTrigger.create({
+      id: "scrollTrigger",
       trigger: elem,
       start : 'top 40% ',
       end: 'top 40%',
-      //markers: true,
+      markers: true,
       onEnter: function() { animateFrom(elem) },
       onEnterBack: function() { },
       onLeave: function() { },
@@ -63,13 +64,12 @@ initialSetup();
 
 function changeModel(button) {
   var list;
-
     if(button=='SZ1'){
     //Remove Display none class
     document.getElementById("digikam").style.display = "block";
+    ScrollTrigger.refresh();
     changeContent(1)
 //      FadeInOut('out');
-
     fadeOutEffect("hideModel",20);
     document.getElementById("loader").visibility = 'visible!important';
     setTimeout(() => {document.getElementById("modelType").setAttribute("src", "images/scene.glb")}, 600);
@@ -80,7 +80,7 @@ function changeModel(button) {
   else if (button=='SZ2'){
     //Block sofia
     document.getElementById("digikam").style.display = "none";
-
+    ScrollTrigger.refresh();
     changeContent(2)
 //    FadeInOut('out');
     fadeOutEffect("hideModel",20);
