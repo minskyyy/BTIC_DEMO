@@ -177,7 +177,7 @@
         <div class="scrollHover">
         <li id="scrollInfo" class="list-group-item bg-transparent p-2 text-light border-0">
           Langsam runterscrollen!
-       </li>
+        </li>
         <li id="scrollWheel" class="list-group-item bg-transparent d-flex justify-content-center p-0 border-0">
           <svg width="40" height="auto" viewBox="0 0 60 133" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="1.5" y="1.5" width="57" height="99" rx="28.5" stroke="white" stroke-width="3"/>
@@ -230,38 +230,38 @@
           <div class="col pt-c pl-5 ">
             <div class="elem pt-4">
                   <div class="trigger reveal reveal_fromLeft">
-                      <h1>AM-Dienstleistersuche </h1>
-                      <h6>Zu Beginn werden im Tool nach möglichen Dienstleistern gesucht. </h6>
+                      <h1 id="header">AM-Dienstleistersuche </h1>
+                      <h6 id="text">Zu Beginn werden im Tool nach möglichen Dienstleistern gesucht. </h6>
                   </div>
             </div>
             <div class="elem pt-11">
                   <div class="trigger reveal reveal_fromLeft">
-                      <h1 class="">Angebotsanfrage & Auftragsvergabe </h1>
-                      <h6>Zu Beginn werden im Tool nach möglichen Dienstleistern gesucht. </h6>
+                      <h1 id="header1">Angebotsanfrage & Auftragsvergabe </h1>
+                      <h6 id="text1">Zu Beginn werden im Tool nach möglichen Dienstleistern gesucht. </h6>
                   </div>
             </div>
             <div class="elem pt-11">
               <div class="trigger reveal reveal_fromLeft">
-                  <h1>Initialisierung Entwicklungsprojekt</h1>
-                  <h6>Zu Beginn werden im Tool nach möglichen Dienstleistern gesucht. </h6>
+                  <h1 id="header2">Initialisierung Entwicklungsprojekt</h1>
+                  <h6 id="text2">Zu Beginn werden im Tool nach möglichen Dienstleistern gesucht. </h6>
               </div>
             </div>
             <div class="elem pt-11">
               <div class="trigger reveal reveal_fromLeft">
-                  <h1>Entwurf des Bauteils</h1>
-                  <h6>Zu Beginn werden im Tool nach möglichen Dienstleistern gesucht. </h6>
+                  <h1 id="header3">Entwurf des Bauteils</h1>
+                  <h6 id="text3">Zu Beginn werden im Tool nach möglichen Dienstleistern gesucht. </h6>
               </div>
             </div>
             <div class="elem pt-11">
               <div class="trigger reveal reveal_fromLeft">
-                  <h1>AR-basiertes Review des Bauteilentwurfs</h1>
-                  <h6>Zu Beginn werden im Tool nach möglichen Dienstleistern gesucht. </h6>
+                  <h1 id="header4">AR-basiertes Review des Bauteilentwurfs</h1>
+                  <h6 id="text4">Zu Beginn werden im Tool nach möglichen Dienstleistern gesucht. </h6>
               </div>
             </div>
             <div class="elem pt-11">
               <div class="trigger reveal reveal_fromLeft">
-                  <h1>Abschluss des Enwicklungsprojektes</h1>
-                  <h6>Zu Beginn werden im Tool nach möglichen Dienstleistern gesucht. </h6>
+                  <h1 id="header5">Abschluss des Enwicklungsprojektes</h1>
+                  <h6 id="text5">Zu Beginn werden im Tool nach möglichen Dienstleistern gesucht. </h6>
               </div>
             </div>
           </div>
@@ -302,32 +302,32 @@
           <div class="col pt-c pl-5 ">
             <div class="elem pt-4">
                   <div class="trigger reveal reveal_fromLeft">
-                      <h1>Auswahl des Bauteils aus Teilekatalog</h1>
-                      <h6>Lorem ipsum.</h6>
+                      <h1 id="header6">Auswahl des Bauteils aus Teilekatalog</h1>
+                      <h6 id="text6">Lorem ipsum.</h6>
                   </div>
             </div>
             <div class="elem pt-11">
                   <div class="trigger reveal reveal_fromLeft">
-                      <h1 class="">Auswahl Druckdienstleister und Auftragserteilung</h1>
-                      <h6>Lorem ipsum.</h6>
+                      <h1 id="header7">Auswahl Druckdienstleister und Auftragserteilung</h1>
+                      <h6 id="text7">Lorem ipsum.</h6>
                   </div>
             </div>
             <div class="elem pt-11">
               <div class="trigger reveal reveal_fromLeft">
-                  <h1>Konfiguration und Start des Qualitätsicherungsprozeses</h1>
-                  <h6>Lorem ipsum.</h6>
+                  <h1 id="header8">Konfiguration und Start des Qualitätsicherungsprozeses</h1>
+                  <h6 id="text8">Lorem ipsum.</h6>
               </div>
             </div>
             <div class="elem pt-11">
               <div class="trigger reveal reveal_fromLeft">
-                  <h1>Durchführungs Qualitätsmonitoring und Dokumentation des Drucks</h1>
-                  <h6>Lorem ipsum.</h6>
+                  <h1 id="header9">Durchführungs Qualitätsmonitoring und Dokumentation des Drucks</h1>
+                  <h6 id="text9">Lorem ipsum.</h6>
               </div>
             </div>
             <div class="elem pt-11">
               <div class="trigger reveal reveal_fromLeft">
-                  <h1>Lieferung des Bauteils und Rechnungsstellung</h1>
-                  <h6>Lorem ipsum.</h6>
+                  <h1 id="header10">Lieferung des Bauteils und Rechnungsstellung</h1>
+                  <h6 id="text10">Lorem ipsum.</h6>
               </div>
             </div>
           </div>
@@ -351,7 +351,9 @@
   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
   <!-- Model Viewer -->
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
+  <!-- Input Data -->
+  <script type="text/javascript" src="dataInput/data.json"></script>
+  <script type="text/javascript" src="dataInput/input.js"></script>
 
 
 </body>

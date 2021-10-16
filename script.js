@@ -63,17 +63,25 @@ initialSetup();
 
 function changeModel(button) {
   var list;
+
     if(button=='SZ1'){
+    //Remove Display none class
+    document.getElementById("digikam").style.display = "block";
+    changeContent(1)
 //      FadeInOut('out');
+
     fadeOutEffect("hideModel",20);
     document.getElementById("loader").visibility = 'visible!important';
     setTimeout(() => {document.getElementById("modelType").setAttribute("src", "images/scene.glb")}, 600);
     setTimeout(() => {document.getElementById("loader").visibility = 'hidden!important'}, 1400);
     setTimeout(() => {fadeInEffect("hideModel",20)}, 1600);
 //      setTimeout(() => {FadeInOut('in'); }, 3000);
-
   }
   else if (button=='SZ2'){
+    //Block sofia
+    document.getElementById("digikam").style.display = "none";
+
+    changeContent(2)
 //    FadeInOut('out');
     fadeOutEffect("hideModel",20);
     document.getElementById("loader").visibility = 'visible!important';
@@ -82,6 +90,7 @@ function changeModel(button) {
 
     setTimeout(() => {fadeInEffect("hideModel",20)}, 1600);
 //    setTimeout(() => {FadeInOut('in'); }, 3000);
+
   }
 }
 
@@ -108,14 +117,17 @@ function fadeInEffect(path, time, delay) {
               var element = document.getElementById(path);
               var op = 0.1;  // initial opacity
               //element.style.display = 'block';
-              var timer = setInterval(function () {
-                  if (op >= 1){
-                      clearInterval(timer);
-                  }
-                  element.style.opacity = op;
-                  element.style.filter = 'alpha(opacity=' + op * 100 + ")";
-                  op += op * 0.1;
-              }, time);
+              if (element != null){
+                var timer = setInterval(function () {
+                    if (op >= 1){
+                        clearInterval(timer);
+                    }
+                    element.style.opacity = op;
+                    element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+                    op += op * 0.1;
+                }, time);
+              }
+
             //Function End
             }, delay);
             //Delay End
