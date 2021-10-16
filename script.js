@@ -31,14 +31,14 @@ function animateFrom(elem, direction) {
 }
 
 function hide(elem) {
-  gsap.set(elem, {autoAlpha: 0});
+  gsap.set(elem, {autoAlpha: 0.05});
 }
 
 document.addEventListener("DOMContentLoaded", function() {
   gsap.registerPlugin(ScrollTrigger);
 
   gsap.utils.toArray(".reveal").forEach(function(elem) {
-    hide(elem); // assure that the element is hidden when scrolled into view
+    hide(elem); // hide all elements
 
     ScrollTrigger.create({
       id: "scrollTrigger",
@@ -47,11 +47,10 @@ document.addEventListener("DOMContentLoaded", function() {
       end: 'top 40%',
       markers: true,
       onEnter: function() { animateFrom(elem) },
-      onEnterBack: function() { },
-      onLeave: function() { },
     });
   });
 });
+
 function initialSetup() {
   if (document.getElementById("loader") !=null) {
     setTimeout(function() {
