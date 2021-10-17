@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
       trigger: elem,
       start : 'top 40% ',
       end: 'top 40%',
-      markers: true,
+      //markers: true,
       onEnter: function() { animateFrom(elem) },
     });
   });
