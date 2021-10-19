@@ -67,11 +67,12 @@ function changeModel(button) {
     //Remove Display none class
     document.getElementById("digikam").style.display = "block";
     ScrollTrigger.refresh();
-    changeContent(1)
+    changeContent(1);
 //      FadeInOut('out');
     fadeOutEffect("hideModel",20);
     document.getElementById("loader").visibility = 'visible!important';
     setTimeout(() => {document.getElementById("modelType").setAttribute("src", "images/scene.glb")}, 600);
+    setTimeout(() => {document.getElementById("modelTitel").innerHTML = "3D-Modell eines ergonomischen Handgriffes"}, 1400);
     setTimeout(() => {document.getElementById("loader").visibility = 'hidden!important'}, 1400);
     setTimeout(() => {fadeInEffect("hideModel",20)}, 1600);
 //      setTimeout(() => {FadeInOut('in'); }, 3000);
@@ -80,11 +81,12 @@ function changeModel(button) {
     //Block sofia
     document.getElementById("digikam").style.display = "none";
     ScrollTrigger.refresh();
-    changeContent(2)
+    changeContent(2);
 //    FadeInOut('out');
     fadeOutEffect("hideModel",20);
     document.getElementById("loader").visibility = 'visible!important';
     setTimeout(() => {document.getElementById("modelType").setAttribute("src", "images/turbine.glb")}, 600);
+    setTimeout(() => {document.getElementById("modelTitel").innerHTML = "3D-Modell eines Turbinenrades"}, 1400);
     setTimeout(() => {document.getElementById("loader").visibility = 'hidden!important'}, 1400);
 
     setTimeout(() => {fadeInEffect("hideModel",20)}, 1600);

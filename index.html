@@ -98,13 +98,14 @@
   <div id="start" class="hero panel pt-10">
     <div class="container h-100 w-100">
       <div class="row row align-items-center h-50">
-        <div class="col-sm-4 pt-15">
+        <div class="col-sm-5 pt-15">
 
           <div id="hideModel">
             <model-viewer class="hidden" id="modelType" src="images/scene.glb"
             poster="images/scene2.png"
             alt="3D Model" ar ar-modes="webxr scene-viewer quick-look"
             environment-image="neutral" id="reveal" loading="eager" camera-controls auto-rotate></model-viewer>
+            <h6 class="text-secondary text-center w-100 d-inline-block" id="modelTitel">3D-Modell eines ergonomischen Handgriffes</h6>
           </div>
             <svg version="1.1" id="loader" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
               viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
@@ -175,13 +176,10 @@
     <div class="scrollSymbol header-section d-flex justify-content-center pt-150">
       <ul class="list-group bg-transparent">
         <div class="scrollHover">
-        <li id="scrollInfo" class="list-group-item bg-transparent p-2 text-light border-0">
-          Langsam runterscrollen!
 
-        </li>
         <li id="scrollWheel" class="list-group-item bg-transparent d-flex justify-content-center p-0 border-0">
           <svg width="40" height="auto" viewBox="0 0 60 133" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="1.5" y="1.5" width="57" height="99" rx="28.5" stroke="white" stroke-width="3"/>
+
               <path d="M14 105L29.5 120L45 105" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M14 116L29.5 131L45 116" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
            </svg>
@@ -263,6 +261,7 @@
               <div class="trigger reveal reveal_fromLeft">
                   <h1 id="header5">Abschluss des Enwicklungsprojektes</h1>
                   <h6 id="text5">Zu Beginn werden im Tool nach möglichen Dienstleistern gesucht. </h6>
+                  <button type="button" class="mt-5 btn btn-light btn-sm" href="google.de"> Zur DigiKAM Live-Demo </button>
               </div>
             </div>
           </div>
@@ -331,11 +330,27 @@
                   <h6 id="text10">Lorem ipsum.</h6>
               </div>
             </div>
+            <div class="elem mt-5">
+              <div class="trigger reveal reveal_fromLeft">
+                <video class="mr-5" width="auto" height="280" controls>
+                    <source src="images/atosVideo.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+                <video width="auto" height="280" controls>
+                    <source src="images/atosVideo.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+              </br>
+                <button type="button" class="mt-3 btn btn-light btn-sm" href="google.de"> Zur Sofia Live-Demo </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
   </div>
-  <div class="footer fixed-bottom mb-1 ml-1">
+  <div class="footer fixed-bottom mb-1 ml-2">
     <a class="copyright">©Justus Schäfer, Atos </a>
   </div>
 </div>
